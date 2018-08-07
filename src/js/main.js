@@ -10,9 +10,6 @@ const registerVisitor = document.getElementById('register-visitor');
 const visitorButton = document.getElementById('visitor-Button');
 const adminButton = document.getElementById('admin-Button');
 const registerChoose = document.getElementById('register-choose');
- 
-
-
   // registerAdmin.classList.replace('block', 'none');
   // registerVisitor.classList.replace('block', 'none');
 
@@ -39,6 +36,7 @@ registerVisitatorButton.addEventListener('click', () => {
   const celular = document.getElementById('celular').value;
   const aQuienVisita = document.getElementById('a-quien-visita').value;
   const company = document.getElementById('company').value;
+  const photo = document.getElementById('canvas').value;
 
   console.log(name.value);
   console.log(company);
@@ -48,8 +46,9 @@ registerVisitatorButton.addEventListener('click', () => {
     celular: celular,
     aQuienVisita: aQuienVisita,
     company: company,
+    photo: photo,
   })
-  // console.log(name);
+  // console.log(data.name);
   alert("Estimado visitante su Registro fue exitoso")
 })
 

@@ -11,5 +11,18 @@
 // *************************************
 
 
+// *********** Loguea al Usuario **************************
+// if (loginButton != null) {
+//   loginButton.addEventListener('click', () => {
+//     if (isValidLogin(emailLogin.value, passwordLogin.value)) {
+//       login(emailLogin.value, passwordLogin.value);
+//       validation(); 
+//     } else {
+//       validInputs2.innerHTML = 'email y/o password incorrecto';
+//     }
+//   });
+//   }
+
+
 
 
