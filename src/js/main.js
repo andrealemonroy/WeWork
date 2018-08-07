@@ -10,32 +10,32 @@ const registerVisitor = document.getElementById('register-visitor');
 const visitorButton = document.getElementById('visitor-Button');
 const adminButton = document.getElementById('admin-Button');
 const registerChoose = document.getElementById('register-choose');
-  // registerAdmin.classList.replace('block', 'none');
-  // registerVisitor.classList.replace('block', 'none');
 
 
+// registerAdmin.classList.replace('block', 'none');
+// registerVisitor.classList.replace('block', 'none');
 
 // Boton como Visitante
-visitorButton.addEventListener('click', () => {
-  registerVisitor.classList.remove('none');
-  registerVisitor.classList.add('block');
-  registerAdmin.classList.replace('block', 'none');
-})
+// visitorButton.addEventListener('click', () => {
+//   registerVisitor.classList.remove('none');
+//   registerVisitor.classList.add('block');
+//   registerAdmin.classList.replace('block', 'none');
+// })
 
 // boton como Administrador
-adminButton.addEventListener('click', () => {
-  registerAdmin.classList.remove('none');
-  registerAdmin.classList.add('block');
-  registerVisitor.classList.replace('block', 'none');
-})
+// adminButton.addEventListener('click', () => {
+//   registerAdmin.classList.remove('none');
+//   registerAdmin.classList.add('block');
+//   registerVisitor.classList.replace('block', 'none');
+// })
 
 
 // Registro del visitante
 registerVisitatorButton.addEventListener('click', () => {
   const name = document.getElementById('name').value;
   const celular = document.getElementById('celular').value;
-  const aQuienVisita = document.getElementById('a-quien-visita').value;
-  const company = document.getElementById('company').value;
+  const aQuienVisita = document.getElementById('workerInput').value;
+  const company = document.getElementById('companies').value;
   const photo = document.getElementById('canvas').value;
 
   console.log(name.value);
@@ -49,8 +49,7 @@ registerVisitatorButton.addEventListener('click', () => {
     photo: photo,
   })
   // console.log(data.name);
-  alert("Estimado visitante su Registro fue exitoso")
-})
+  alert("Estimado visitante su Registro fue exitoso")})
 
 // Registro del Administrador
 registerAdministratorButton.addEventListener('click', () => {
@@ -68,4 +67,3 @@ registerAdministratorButton.addEventListener('click', () => {
   })
   alert("Estimado colaborador su Registro fue exitoso")
 })
-

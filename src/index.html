@@ -1,83 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>WEWORK</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>We Work</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="../WeWork/src/css/main.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../WeWork/src/css/style.css">
 </head>
 
 <body>
+  <header>
+    <div class="btn-group float-left">
+      <a class="btn btn-outline-secondary" id="btn1" href="#" data-toggle="modal" data-target="#passModal">Visitante</a>
+    </div>
 
-  <div id="register-choose" class="block">
-    <form>
-      <button id="visitor-Button"> Visitante</button>
-      <br>
-      <button id="admin-Button"> Administrador</button>
-      <br>
-    </form>
+    <div class="btn-group float-right">
+      <a class="btn btn-outline-secondary" id="admin-Button" href="#" data-toggle="modal" data-target="#admiModal">Administrador</a>
+    </div>
+  </header>
+
+  <div class="modal" id="passModal" tabindex="-1" role="dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">WeWork</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body" id="body">
+
+
+        <!-- Modal para registrar visitante -->
+        <div id="register-visitor" class="input-group mb-3">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="name" placeholder="Ingrese tu nombre">
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="celular" placeholder="Ingrese un número telefonico">
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="workerInput" placeholder="¿A quién visitas?">
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="company" placeholder="¿A qué empresa pertenece?">
+          </div>
+          <div class="input-group mb-3">
+            <input type="button" class="form-control" id="register-Visitator-Button" value="Registrar Visitante">
+          </div>
+
+          <div>
+              <h4>Bienvenido, Sonríe a la cámara</h4>
+              <div class="container">             
+                <div class="app">              
+                  <a href="#" id="start-camera" class="visible">Toca aquí para empezar.</a>
+                  <video id="camera-stream"></video>
+                  <img id="snap">              
+                  <p id="error-message"></p>             
+                  <div class="controls">
+                    <a href="#" id="delete-photo" title="Delete Photo" class="disabled"><i class="material-icons">delete</i></a>
+                    <a href="#" id="take-photo" title="Take Photo"><i class="material-icons">camera_alt</i></a>
+                    <a href="#" id="download-photo" download="selfie.png" title="Save Photo" class="disabled"><i class="material-icons">file_download</i></a>  
+                  </div>
+                  <canvas></canvas>
+                </div>
+              </div>
+          </div>
+
+        </div>
+
+
+        <div class="input-group mb-3">
+          <input type="text" id="textSearch" class="form-control" placeholder="Busca aquí la empresa" aria-label="Recipient's company"
+            aria-describedby="basic-addon2">
+        </div>
+
+        <div class="input-group-append">
+          <button id="buttonStart" class="btn btn-outline-secondary" type="button">-></button>
+        </div>
+
+        <div class="input-group mb-3">
+          <div id="companies"></div>
+        </div>
+
+      </div>
+    </div>
   </div>
 
 
-  <div id="register-visitor" class="block">
-    <form>
-      <p> visitante:</p>
-      <input type="text" id="name" placeholder="Ingrese tu nombre">
-      <br>
-      <input type="text" id="celular" placeholder="Ingrese un número telefonico">
-      <input type="text" id="a-quien-visita" placeholder="¿A quién visitas?">
-      <br>
-      <input type="text" id="company" placeholder="¿A qué empresa pertenece?">
-      <br>
-      <input type="button" id="register-Visitator-Button" value="Registrar Visitante">
-      <br>
-      <br>
+   <!-- Modal para registrar administrador -->
+  <div class="modal" id="admiModal" tabindex="-1" role="dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">WeWork</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
 
-      <!-- <input type="file" accept="image/*" capture="camera"> -->
-      <video id="video"></video>
-      <button id="start-button">Take photo</button>
-      <canvas id="canvas"></canvas>
-      <img src="http://placekitten.com/g/320/261" id="photo" alt="photo">
+      <div class="modal-body">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Ingresar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Registrar</a>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <form id="form-login">
+
+              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div id="register-admin" class="none">
+
+                  <p> Administrador:</p>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="name-admin" placeholder="Nombre">
+                  </div>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="celular-admin" placeholder="Número de Telefono">
+                  </div>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="email-admin" placeholder="Correo Electrónico">
+                  </div>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="password-admin" placeholder="Contraseña">
+                  </div>
+                  <div class="input-group mb-3">
+                    <input type="button" class="form-control" id="register-Administrator-Button" value="Registrar Administrador">
+                  </div>
 
 
-  <div id="register-admin" class="block">
-    <form>
-      <p> Administrador:</p>
-      <input type="text" id="name-admin" placeholder="Nombre">
-      <br>
-      <input type="text" id="celular-admin" placeholder="Número de Telefono">
-      <br>
-      <input type="text" id="email-admin" placeholder="Correo Electrónico">
-      <br>
-      <input type="text" id="password-admin" placeholder="Contraseña">
-      <br>
-      <input type="button" id="register-Administrator-Button" value="Registrar">
-      <br>
-      <input type="button" id="login-Administrator-Button" value="Ingresar">
-    </form>
-  </div>
+                </div>
 
-  <div id="login-admin" class="block">
-    <form>
-      <p> Login:</p>
-      <input type="text" id="name-login" placeholder="Ingrese Usuario">
-      <br>
-      <input type="text" id="email-login" placeholder="Ingrese Correo Electrónico">
-      <br>
-      <input type="button" id="register-Administrator-Button" value="Login">
-      <br>
-      <br>
-    </form>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 
   <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
-  <script src="js/photo.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/main.js"></script>
-
-
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+    crossorigin="anonymous"></script>
+  <script src="../src/js/data.js"></script>
+  <script src="../src/js/dom.js"></script>
+  <script src="../src/js/main.js"></script>
+  <script src="../src/js/app.js"></script>
+  <script src="../src/js/captura.js"></script>
 </body>
 
 </html>

@@ -18,3 +18,11 @@ clourd firestore
   //   });
 
   
+  Captura fotos:
+  ====================
+  
+
+          <!-- <video id="video"></video>
+        <button id="start-button">Take photo</button>
+        <canvas id="canvas"></canvas>
+        <img src="http://placekitten.com/g/320/261" id="photo" alt="photo"> -->
