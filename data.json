@@ -1,0 +1,31 @@
+{
+    "Laboratoria": {
+        "name": {
+            "Andrea Monroy": {
+                "email": "andreale17@icloud.com"
+            },
+            "Lorena Reyes": {
+                "address": "@gmail.com"
+            },
+            "Ingrid Tipacti": {
+                "address": "ingrid@gmail.com"
+            },
+            "Grecia ": {
+                "address": "Grecia"
+            }
+        }
+    },
+    "Comunal": {
+        "name": {
+            "Adriana Monroy": {
+                "address": "adriale12@icloud.com"
+            },
+            "Mirella Curaca": {
+                "address": "mire_pop3@hotmail.com"
+            },
+            "Mariela Curaca": {
+                "address": "marielacuraca@gmail.com"
+            }
+        }
+    }
+}
