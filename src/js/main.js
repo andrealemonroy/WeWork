@@ -10,27 +10,27 @@ const registerVisitor = document.getElementById('register-visitor');
 const visitorButton = document.getElementById('visitor-Button');
 const adminButton = document.getElementById('admin-Button');
 const registerChoose = document.getElementById('register-choose');
- 
 
 
-  // registerAdmin.classList.replace('block', 'none');
-  // registerVisitor.classList.replace('block', 'none');
+
+// registerAdmin.classList.replace('block', 'none');
+// registerVisitor.classList.replace('block', 'none');
 
 
 
 // Boton como Visitante
-visitorButton.addEventListener('click', () => {
-  registerVisitor.classList.remove('none');
-  registerVisitor.classList.add('block');
-  registerAdmin.classList.replace('block', 'none');
-})
+// visitorButton.addEventListener('click', () => {
+//   registerVisitor.classList.remove('none');
+//   registerVisitor.classList.add('block');
+//   registerAdmin.classList.replace('block', 'none');
+// })
 
 // boton como Administrador
-adminButton.addEventListener('click', () => {
-  registerAdmin.classList.remove('none');
-  registerAdmin.classList.add('block');
-  registerVisitor.classList.replace('block', 'none');
-})
+// adminButton.addEventListener('click', () => {
+//   registerAdmin.classList.remove('none');
+//   registerAdmin.classList.add('block');
+//   registerVisitor.classList.replace('block', 'none');
+// })
 
 
 // Registro del visitante
@@ -69,4 +69,3 @@ registerAdministratorButton.addEventListener('click', () => {
   })
   alert("Estimado colaborador su Registro fue exitoso")
 })
-

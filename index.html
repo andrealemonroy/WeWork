@@ -14,91 +14,141 @@
 
 <body>
   <header>
-    <div class="btn-group float right">
-      <a class="btn btn-outline-secondary" id="btn1" href="#" data-toggle="modal" data-target="#passModal">Ingresar</a>
+
+    <div class="btn-group float-left">
+      <a class="btn btn-outline-secondary" id="btn1" href="#" data-toggle="modal" data-target="#passModal">Visitante</a>
     </div>
+
+    <div class="btn-group float-right">
+      <a class="btn btn-outline-secondary" id="admin-Button" href="#" data-toggle="modal" data-target="#admiModal">Administrador</a>
+    </div>
+
   </header>
 
   <div class="modal" id="passModal" tabindex="-1" role="dialog">
 
-    <div class="modal-dialog" role="document">
+    <div class="modal-content">
 
-      <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">WeWork</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
 
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">WeWork</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-
-        <div class="modal-body" id="body">
-          <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Ingresar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Registrar</a>
-            </li>
-          </ul>
+      <div class="modal-body" id="body">
 
 
-          <div class="tab-content" id="myTabContent">
-
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-              <div id="register-visitor" class="input-group mb-3">
+        <div id="register-visitor" class="input-group mb-3">
 
 
-                <div class="input-group mb-3">
-                  <input type="text" class="form-control" id="name" placeholder="Ingrese tu nombre">
-                </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="name" placeholder="Ingrese tu nombre">
+          </div>
 
-                <div class="input-group mb-3">
-                  <input type="text" class="form-control" id="celular" placeholder="Ingrese un número telefonico">
-                </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="celular" placeholder="Ingrese un número telefonico">
+          </div>
 
-                <div class="input-group mb-3">
-                  <input type="text" class="form-control" id="workerInput" placeholder="¿A quién visitas?">
-                </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="workerInput" placeholder="¿A quién visitas?">
+          </div>
 
-                <div class="input-group mb-3">
-                  <input type="text" class="form-control" id="company" placeholder="¿A qué empresa pertenece?">
-                </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="company" placeholder="¿A qué empresa pertenece?">
+          </div>
 
-                <div class="input-group mb-3">
-                  <input type="button" class="form-control" id="register-Visitator-Button" value="Registrar Visitante">
-                </div>
-
-              </div>
-            </div>
-
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
-              <div class="input-group mb-3">
-                <input type="text" id="textSearch" class="form-control" placeholder="Busca aquí la empresa" aria-label="Recipient's company"
-                  aria-describedby="basic-addon2">
-              </div>
-
-              <div class="input-group-append">
-                <button id="buttonStart" class="btn btn-outline-secondary" type="button">-></button>
-              </div>
-
-              <div class="input-group mb-3">
-                <div id="companies"></div>
-              </div>
-
-            </div>
-
+          <div class="input-group mb-3">
+            <input type="button" class="form-control" id="register-Visitator-Button" value="Registrar Visitante">
           </div>
 
         </div>
 
+
+
+
+        <div class="input-group mb-3">
+          <input type="text" id="textSearch" class="form-control" placeholder="Busca aquí la empresa" aria-label="Recipient's company"
+            aria-describedby="basic-addon2">
+        </div>
+
+        <div class="input-group-append">
+          <button id="buttonStart" class="btn btn-outline-secondary" type="button">-></button>
+        </div>
+
+        <div class="input-group mb-3">
+          <div id="companies"></div>
+        </div>
+
+
       </div>
 
     </div>
+
   </div>
 
 
+
+  <div class="modal" id="admiModal" tabindex="-1" role="dialog">
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">WeWork</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Ingresar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Registrar</a>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <form id="form-login">
+
+              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+                <div id="register-admin" class="none">
+
+                  <p> Administrador:</p>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="name-admin" placeholder="Nombre">
+                  </div>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="celular-admin" placeholder="Número de Telefono">
+                  </div>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="email-admin" placeholder="Correo Electrónico">
+                  </div>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="password-admin" placeholder="Contraseña">
+                  </div>
+                  <div class="input-group mb-3">
+                    <input type="button" class="form-control" id="register-Administrator-Button" value="Registrar Administrador">
+                  </div>
+
+
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+			</div>
+			
+		</div>
+		
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
