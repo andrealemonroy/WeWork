@@ -47,7 +47,8 @@ window.filterWorkers = (dataCompanies, searchWorkers) => {
   arrayWorkers = [];
   if (length > 0);
   for (let company in dataCompanies) {
-    arrayWorkers.push(worker)
+    arrayWorkers.push(company);
   }
-
+  console.log(arrayWorkers);
+return arrayWorkers
 }
