@@ -50,5 +50,5 @@ window.filterWorkers = (dataCompanies, searchWorkers) => {
     arrayWorkers.push(company);
   }
   console.log(arrayWorkers);
-return arrayWorkers
+  return arrayWorkers
 }
