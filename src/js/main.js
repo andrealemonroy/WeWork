@@ -37,7 +37,7 @@ const registerChoose = document.getElementById('register-choose');
 registerVisitatorButton.addEventListener('click', () => {
   const name = document.getElementById('name').value;
   const celular = document.getElementById('celular').value;
-  const aQuienVisita = document.getElementById('a-quien-visita').value;
+  const aQuienVisita = document.getElementById('workerInput').value;
   const company = document.getElementById('company').value;
 
   console.log(name.value);
