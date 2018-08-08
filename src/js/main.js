@@ -12,11 +12,8 @@ const adminButton = document.getElementById('admin-Button');
 const registerChoose = document.getElementById('register-choose');
 
 
-
 // registerAdmin.classList.replace('block', 'none');
 // registerVisitor.classList.replace('block', 'none');
-
-
 
 // Boton como Visitante
 // visitorButton.addEventListener('click', () => {
@@ -38,7 +35,8 @@ registerVisitatorButton.addEventListener('click', () => {
   const name = document.getElementById('name').value;
   const celular = document.getElementById('celular').value;
   const aQuienVisita = document.getElementById('workerInput').value;
-  const company = document.getElementById('company').value;
+  const company = document.getElementById('companies').value;
+  const photo = document.getElementById('canvas').value;
 
   console.log(name.value);
   console.log(company);
@@ -48,10 +46,10 @@ registerVisitatorButton.addEventListener('click', () => {
     celular: celular,
     aQuienVisita: aQuienVisita,
     company: company,
+    photo: photo,
   })
-  // console.log(name);
-  alert("Estimado visitante su Registro fue exitoso")
-})
+  // console.log(data.name);
+  alert("Estimado visitante su Registro fue exitoso")})
 
 // Registro del Administrador
 registerAdministratorButton.addEventListener('click', () => {
